@@ -11,6 +11,7 @@ class LocationCard extends Component {
           </picture>
           <h3>Name: <span className="card-locationname">{this.props.location.name}</span></h3>
           <p>Location: {this.props.location.Address}</p>
+          <button type="button" onClick={() => this.props.deleteLocation(this.props.location.id)}>Close Location</button>
         </div>
       </div>
     );

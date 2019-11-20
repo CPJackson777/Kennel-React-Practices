@@ -1,23 +1,50 @@
 {
-    "animals": [
-        { "id": 1, "name": "Jagger", "breed": "Doberman Pinscher"},
-        { "id": 2, "name": "Decker", "breed": "German Sheperd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-
-    "locations": [
-        { "id": 1, "name": "Dog Houses of Nashville", "Address": "321 Bark Ave, Nashville, TN 37201"},
-        { "id": 2, "name": "Dog Houses of Murfreesboro", "Address": "456 Woof St, Murfreesboro, TN 37128" },
-        { "id": 3, "name": "Dog Houses of Chattanooga", "Address": "987 Tail Wag Dr, Chattanooga, TN 37421" }
-    ],
-
-    "employees": [
-        { "id": 1, "name": "Edward Scissorhands", "Position": "Lead Groomer"},
-        { "id": 2, "name": "Decker", "Position": "Office Manager" },
-        { "id": 3, "name": "Esme", "Position": "Accounting" }
-    ],
-
-    "owners": [
-        { "id": 1, "name": "Prince Goldlink", "breed": "Doberman Pinscher"}
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Jagger",
+      "breed": "Doberman Pinscher"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Dog Houses of Nashville",
+      "Address": "321 Bark Ave, Nashville, TN 37201"
+    },
+    {
+      "id": 3,
+      "name": "Dog Houses of Chattanooga",
+      "Address": "987 Tail Wag Dr, Chattanooga, TN 37421"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Edward Scissorhands",
+      "Position": "Lead Groomer"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "Position": "Office Manager"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Prince Goldlink",
+      "breed": "Doberman Pinscher"
+    },
+    {
+      "id": 2,
+      "name": "King Golddust",
+      "breed": "Doberman Pinscher"
+    }
+  ]
 }
