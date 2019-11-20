@@ -10,7 +10,7 @@ class EmployeeCard extends Component {
             <img src={require('./Evan.jpg')} alt="My Dog" />
           </picture>
           <h3>Name: <span className="card-employeename">{this.props.employee.name}</span></h3>
-          <p>Position: {this.props.employee.position}</p>
+          <p>Position: {this.props.employee.Position}</p>
         </div>
       </div>
     );
