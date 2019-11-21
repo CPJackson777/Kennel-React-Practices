@@ -5,9 +5,11 @@ import AnimalList from './animal/AnimalList'
 import AnimalDetail from './animal/AnimalDetail'
 //only include these once they are built - previous practice exercise
 import LocationList from './locations/LocationList'
+import LocationDetail from './locations/LocationDetail'
 import OwnerList from './owners/OwnerList'
-import OwnerDetail from './owner/OwnerDetail'
+import OwnerDetail from './owners/OwnerDetail'
 import EmployeeList from './employees/EmployeeList'
+import EmployeeDetail from './employees/EmployeeDetail'
 
 
 class ApplicationViews extends Component {
@@ -35,11 +37,17 @@ class ApplicationViews extends Component {
         matches only numbers after the final slash in the URL
         http://localhost:3000/animals/jack
         */}
-        <Route path="/locations" render={(props) => {
+        <Route exact path="/locations" render={(props) => {
           return <LocationList />
         }} />
-        <Route path="/employees" render={(props) => {
+        <Route path="/locations/:locationId(\d+)" render={(props) => {
+          return <LocationDetail locationId={parseInt(props.match.params.locationId)} />
+        }} />
+        <Route exact path="/employees" render={(props) => {
           return <EmployeeList />
+        }} />
+        <Route path="/owners/:ownerId(\d+)" render={(props) => {
+          return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} />
         }} />
         <Route exact path="/owners" render={(props) => {
           return <OwnerList />
