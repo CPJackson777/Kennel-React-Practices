@@ -27,7 +27,12 @@ class ApplicationViews extends Component {
         <Route path="/animals/:animalId(\d+)" render={(props) => {
           // console.log(props)
           // Pass the animalId to the AnimalDetailComponent
-          return <AnimalDetail animalId={parseInt(props.match.params.animalId)} />
+          return <AnimalDetail animalId={parseInt(props.match.params.animalId)}
+          // history = {props.history}
+          // match = {props.match}
+          // location = {props.location}
+          {...props}  // <-- easier way to spread the info in the 3 lines commented directly above
+           />
         }} />
         {/*
         ^^^ The above route is a new route to handle a URL with the following pattern:
@@ -41,14 +46,18 @@ class ApplicationViews extends Component {
           return <LocationList />
         }} />
         <Route path="/locations/:locationId(\d+)" render={(props) => {
-          return <LocationDetail locationId={parseInt(props.match.params.locationId)} />
+          return <LocationDetail locationId={parseInt(props.match.params.locationId)}
+          {...props}
+           />
         }} />
+
         <Route exact path="/employees" render={(props) => {
           return <EmployeeList />
         }} />
-        <Route path="/owners/:ownerId(\d+)" render={(props) => {
+        <Route path="/employees/:employeeId(\d+)" render={(props) => {
           return <EmployeeDetail employeeId={parseInt(props.match.params.employeeId)} />
         }} />
+
         <Route exact path="/owners" render={(props) => {
           return <OwnerList />
         }} />

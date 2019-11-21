@@ -26,7 +26,7 @@ class OwnerDetail extends Component {
       <div className="card">
         <div className="card-content">
           <picture>
-            <img src={require('./gold-man.jpg')} alt="Pic of Owner" />
+            <img src={require('./gold-man.jpg')} alt="Owner" />
           </picture>
             <h3>Owner: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Breed Owned: {this.state.breed}</p>

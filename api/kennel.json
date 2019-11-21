@@ -10,9 +10,10 @@
       "name": "Decker",
       "breed": "German Sheperd"
     },
-    { "id": 3, 
-      "name": "Esme", 
-      "breed": "Pitbull" 
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull"
     }
   ],
   "locations": [
@@ -21,9 +22,10 @@
       "name": "Dog Houses of Nashville",
       "Address": "321 Bark Ave, Nashville, TN 37201"
     },
-    { "id": 2, 
-      "name": "Dog Houses of Murfreesboro", 
-      "Address": "456 Woof St, Murfreesboro, TN 37128" 
+    {
+      "id": 2,
+      "name": "Dog Houses of Murfreesboro",
+      "Address": "456 Woof St, Murfreesboro, TN 37128"
     },
     {
       "id": 3,
@@ -42,9 +44,10 @@
       "name": "Decker",
       "Position": "Office Manager"
     },
-    { "id": 3, 
-      "name": "Esme", 
-      "Position": "Accounting" 
+    {
+      "id": 3,
+      "name": "Esme",
+      "Position": "Accounting"
     }
   ],
   "owners": [
