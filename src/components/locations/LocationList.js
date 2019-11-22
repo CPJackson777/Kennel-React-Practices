@@ -39,6 +39,12 @@ import React, { Component } from 'react'
         console.log("LocationList: Render");
       
         return(
+          <React.Fragment>
+          <section className="section-content">
+          <button type="button" className="btn"
+            onClick={() => { this.props.history.push("/locations/new") }}> Add Location 
+          </button>
+        </section>
           <div className="container-cards">
             {this.state.locations.map(location =>
               <LocationCard
@@ -48,6 +54,7 @@ import React, { Component } from 'react'
             />
           )}
           </div>
+          </React.Fragment>
         )
       }
 }

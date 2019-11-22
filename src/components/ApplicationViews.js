@@ -8,6 +8,7 @@ import AnimalForm from './animal/AnimalForm'
 //only include these once they are built - previous practice exercise
 import LocationList from './locations/LocationList'
 import LocationDetail from './locations/LocationDetail'
+import LocationForm from './locations/LocationForm'
 import OwnerList from './owners/OwnerList'
 import OwnerDetail from './owners/OwnerDetail'
 import EmployeeList from './employees/EmployeeList'
@@ -48,12 +49,14 @@ class ApplicationViews extends Component {
         http://localhost:3000/animals/jack
         */}
         <Route exact path="/locations" render={(props) => {
-          return <LocationList />
+          return <LocationList {...props} />
         }} />
         <Route path="/locations/:locationId(\d+)" render={(props) => {
           return <LocationDetail locationId={parseInt(props.match.params.locationId)}
-            {...props}
-          />
+            {...props} />
+        }} />
+          <Route path="/locations/new" render={(props) => {
+            return <LocationForm {...props} />
         }} />
 
         <Route exact path="/employees" render={(props) => {

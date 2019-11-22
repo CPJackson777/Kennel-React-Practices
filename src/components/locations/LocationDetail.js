@@ -36,9 +36,9 @@ class LocationDetail extends Component {
     return (
       <div className="card">
         <div className="card-content">
-          <picture>
+          {/* <picture>
             <img src={require(`./${this.props.location.locationPic}`)} alt="Kennel" />
-          </picture>
+          </picture> */}
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.location}</p>
             <button type = "button" disabled = {this.state.loadingStatus} onClick = {this.handleDelete}>Close Location</button>
