@@ -14,23 +14,31 @@
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull"
+    },
+    {
+      "name": "Rover",
+      "breed": "Boxer",
+      "id": 4
     }
   ],
   "locations": [
     {
       "id": 1,
       "name": "Dog Houses of Nashville",
-      "Address": "321 Bark Ave, Nashville, TN 37201"
+      "Address": "321 Bark Ave, Nashville, TN 37201",
+      "locationPic": "dogkennels2_orig.jpg"
     },
     {
       "id": 2,
       "name": "Dog Houses of Murfreesboro",
-      "Address": "456 Woof St, Murfreesboro, TN 37128"
+      "Address": "456 Woof St, Murfreesboro, TN 37128",
+      "locationPic": "vet1.jpg"
     },
     {
       "id": 3,
       "name": "Dog Houses of Chattanooga",
-      "Address": "987 Tail Wag Dr, Chattanooga, TN 37421"
+      "Address": "987 Tail Wag Dr, Chattanooga, TN 37421",
+      "locationPic": "vet2.jpg"
     }
   ],
   "employees": [

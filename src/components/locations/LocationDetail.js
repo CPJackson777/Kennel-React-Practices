@@ -7,6 +7,7 @@ class LocationDetail extends Component {
   state = {
       name: "",
       location: "",
+      locationPic: "",
       loadingStatus: true
   }
 
@@ -18,6 +19,7 @@ class LocationDetail extends Component {
       this.setState({
         name: location.name,
         location: location.Address,
+        locationPic: location.locationPic,
         loadingStatus: false
       });
     });
@@ -27,7 +29,7 @@ class LocationDetail extends Component {
   handleDelete = () => {
     this.setState({loadingStatus: true})
     LocationManager.delete(this.props.locationId)
-    .then(() => this.props.history.push("/animals"))
+    .then(() => this.props.history.push("/locations"))
   }
 
   render() {
@@ -35,11 +37,11 @@ class LocationDetail extends Component {
       <div className="card">
         <div className="card-content">
           <picture>
-            <img src={require('./dogkennels2_orig.jpg')} alt="Kennel" />
+            <img src={require(`./${this.props.location.locationPic}`)} alt="Kennel" />
           </picture>
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Address: {this.state.location}</p>
-            <button type = "button" disabled = {this.state.loadingStatus} onClick = {this.handleDelete}>Discharge</button>
+            <button type = "button" disabled = {this.state.loadingStatus} onClick = {this.handleDelete}>Close Location</button>
         </div>
       </div>
     );
