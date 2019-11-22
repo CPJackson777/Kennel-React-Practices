@@ -16,9 +16,9 @@
       "breed": "Pitbull"
     },
     {
-      "name": "Rover",
-      "breed": "Boxer",
-      "id": 4
+      "id": 4,
+      "name": "Kong",
+      "breed": "Terrier"
     }
   ],
   "locations": [
@@ -38,7 +38,7 @@
       "id": 3,
       "name": "Dog Houses of Chattanooga",
       "Address": "987 Tail Wag Dr, Chattanooga, TN 37421",
-      "locationPic": "vet2.jpg"
+      "locationPic": "vet office.jpg"
     }
   ],
   "employees": [
