@@ -22,7 +22,7 @@ class ApplicationViews extends Component {
 
   // Check if credentials are in local storage (if user has logged in)
   //returns true/false
-  isAuthenticated = () => localStorage.getItem("credentials") !== null
+
 
   render() {
     return (
@@ -32,12 +32,13 @@ class ApplicationViews extends Component {
         }} />
         {/* Make sure you add the `exact` attribute here */}
         <Route exact path="/animals" render={props => {
-          if (this.isAuthenticated()) {
+          if (this.props.user) {
             return <AnimalList {...props} />
           } else {
             return <Redirect to="/login" />
           }
         }} />
+        
         <Route exact path="/animals/:animalId(\d+)" render={(props) => {
           // console.log(props)
           // Pass the animalId to the AnimalDetailComponent
@@ -54,10 +55,14 @@ class ApplicationViews extends Component {
             return <AnimalEditForm {...props} />
           }}
         />
-        
+
 
         <Route path="/animals/new" render={(props) => {
           return <AnimalForm {...props} />
+        }} />
+
+        <Route path="/login" render={(props) => {
+          return <Login setUser={this.props.setUser} {...props} />
         }} />
         {/*
         ^^^ The above route is a new route to handle a URL with the following pattern:
@@ -92,7 +97,7 @@ class ApplicationViews extends Component {
           return <OwnerDetail ownerId={parseInt(props.match.params.ownerId)} />
         }} />
 
-        <Route path="/login" component={Login} />
+        
 
       </React.Fragment>
     )
